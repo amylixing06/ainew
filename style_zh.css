@@ -242,6 +242,8 @@ h2 {
   margin-bottom: 0.5rem;
 }
 .bento-card .icon-title-row .icon {
+  width: 32px;
+  height: 32px;
   margin-bottom: 0;
 }
 
