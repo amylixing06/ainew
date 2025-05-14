@@ -4,12 +4,16 @@
     {
       "src": "*.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "src": "/style_zh.css",
+      "dest": "/style_zh.css"
     },
     {
       "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico))",
