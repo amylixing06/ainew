@@ -27,6 +27,21 @@
             margin-right: 8px;
             vertical-align: middle;
         }
+
+        .row1 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: repeat(3, auto);
+            gap: 12px;
+            align-items: start;
+        }
+        .row1 > .card-hero {
+            grid-row: 1 / span 3;
+        }
+        .row1 > .card-selling-point,
+        .row1 > .card-feature {
+            width: 100%;
+        }
     </style>
 </head>
 <body>

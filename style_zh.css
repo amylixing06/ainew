@@ -69,7 +69,18 @@ p {
 
 /* Specific row layouts based on design brief */
 .row1 {
-  grid-template-columns: 2fr 1fr; /* Approx 60-65% and 35-40% */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 12px;
+  align-items: start;
+}
+.row1 > .card-hero {
+  grid-row: 1 / span 3;
+}
+.row1 > .card-selling-point,
+.row1 > .card-feature {
+  width: 100%;
 }
 
 .row2 {
