@@ -40,7 +40,6 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
   font-weight: bold;
 }
 
@@ -86,6 +85,10 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-bottom: 16px;
+}
+.row1 > .card-feature:last-child {
+  margin-bottom: 0;
 }
 
 .row2 {
@@ -118,7 +121,6 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
   margin-bottom: 0.5rem;
 }
 
