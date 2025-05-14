@@ -73,6 +73,7 @@ p {
   grid-template-rows: repeat(3, 1fr); /* 三个卡片等高 */
   gap: 12px;
   align-items: stretch;
+  margin-bottom: 24px; /* 或更大数值，根据实际效果调整 */
 }
 .row1 > .card-hero {
   grid-row: 1 / span 3;
@@ -88,7 +89,7 @@ p {
   margin-bottom: 16px;
 }
 .row1 > .card-feature:last-child {
-  margin-bottom: 0;
+  margin-bottom: 24px;
 }
 
 .row2 {
