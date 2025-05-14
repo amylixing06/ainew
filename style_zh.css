@@ -12,13 +12,13 @@ body {
   /* justify-content: center; */
   /* align-items: flex-start; */
   min-height: 100vh;
-  padding: 20px; /* Add some padding around the content */
+  padding: 8px; /* 缩小页面边距 */
   box-sizing: border-box;
 }
 
 .app-container {
   width: 100%;
-  max-width: 1200px; /* Max width for the content, can be adjusted */
+  max-width: 900px; /* 缩小最大宽度 */
   margin: 0 auto;
 }
 
@@ -45,7 +45,7 @@ p {
 }
 
 .headline-gradient {
-  font-size: 2.5rem; /* Large title */
+  font-size: 2rem; /* 稍微缩小主标题字号 */
   margin-bottom: 0.5rem;
 }
 
@@ -58,14 +58,13 @@ p {
 /* Bento Grid Layout */
 .bento-grid {
   display: grid;
-  gap: 20px; /* Spacing between cards */
+  gap: 12px; /* 缩小卡片间距 */
   width: 100%;
 }
 
 .bento-row {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */ /* Adjusted for fixed layout */
-  gap: 20px;
+  gap: 12px; /* 缩小行内卡片间距 */
 }
 
 /* Specific row layouts based on design brief */
@@ -83,23 +82,28 @@ p {
 
 /* Card Design */
 .bento-card {
-  background-color: #ffffff; /* White background for cards */
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  border-radius: 16px; /* 稍微缩小圆角 */
+  padding: 14px 16px; /* 缩小内边距 */
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.07), 0 1px 2px -2px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
-  /* transition: transform 0.2s ease-in-out; */ /* Hover effect not needed for screenshot */
+  min-height: unset; /* 高度自适应内容 */
 }
 
 /* .bento-card:hover {
   transform: translateY(-5px); 
 } */
 
-.bento-card h2 {
-  font-size: 1.25rem; /* Medium card titles */
-  font-weight: 600; /* Semi-bold */
-  margin-bottom: 0.75rem;
+h2 {
+  font-size: 1.5rem; /* 加大字号 */
+  font-weight: 700; /* 更加粗 */
+  background: linear-gradient(to right, #C084FC, #7E22CE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 0.5rem;
 }
 
 .bento-card p {
