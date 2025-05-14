@@ -1,0 +1,256 @@
+/* General Styles & Resets */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb; /* Light gray background for the page */
+  color: #374151; /* Default text color */
+  /* display: flex; */ /* Removed for screenshotting a fixed-width body */
+  /* justify-content: center; */
+  /* align-items: flex-start; */
+  min-height: 100vh;
+  padding: 20px; /* Add some padding around the content */
+  box-sizing: border-box;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1200px; /* Max width for the content, can be adjusted */
+  margin: 0 auto;
+}
+
+/* Typography */
+h1, h2 {
+  margin-top: 0;
+  color: #1F2937; /* Dark gray for titles */
+}
+
+p {
+  color: #6B7280; /* Medium gray for descriptive text */
+  line-height: 1.6;
+}
+
+/* Gradient Text */
+.headline-gradient,
+.highlight-gradient {
+  background: linear-gradient(to right, #C084FC, #7E22CE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.headline-gradient {
+  font-size: 2.5rem; /* Large title */
+  margin-bottom: 0.5rem;
+}
+
+.highlight-gradient {
+  font-size: 1.8rem; /* Large data point */
+  display: block; /* Make it take its own line if needed */
+  margin-top: 0.5rem;
+}
+
+/* Bento Grid Layout */
+.bento-grid {
+  display: grid;
+  gap: 20px; /* Spacing between cards */
+  width: 100%;
+}
+
+.bento-row {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */ /* Adjusted for fixed layout */
+  gap: 20px;
+}
+
+/* Specific row layouts based on design brief */
+.row1 {
+  grid-template-columns: 2fr 1fr; /* Approx 60-65% and 35-40% */
+}
+
+.row2 {
+  grid-template-columns: 1fr 1fr; /* Approx 50% and 50% */
+}
+
+.row3 {
+  grid-template-columns: 1fr 2fr; /* Approx 35-40% and 60-65% */
+}
+
+/* Card Design */
+.bento-card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  /* transition: transform 0.2s ease-in-out; */ /* Hover effect not needed for screenshot */
+}
+
+/* .bento-card:hover {
+  transform: translateY(-5px); 
+} */
+
+.bento-card h2 {
+  font-size: 1.25rem; /* Medium card titles */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 0.75rem;
+}
+
+.bento-card p {
+  font-size: 0.9rem; /* Small descriptive text */
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Allows text to take available space before CTA/tags */
+}
+
+/* Card Specifics */
+.card-hero {
+  position: relative; /* For the 'New!' tag */
+  justify-content: space-between; 
+}
+
+.tag-new {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #EDE9FE; /* Light purple background for tag */
+  color: #7E22CE; /* Deep purple text */
+  padding: 4px 10px;
+  border-radius: 9999px; /* Pill shape */
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.sub-headline {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-visual {
+  width: 100%;
+  max-width: 400px; 
+  margin: 1rem auto 0; 
+  border-radius: 12px; 
+  overflow: hidden; 
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-selling-point .highlight-gradient {
+  margin-top: auto; /* Push to bottom */
+  text-align: right;
+}
+
+/* Icons Placeholder Styling */
+.card-icon-placeholder, .step-icon-placeholder {
+  font-size: 0.8rem;
+  color: #9CA3AF;
+  border: 1px dashed #D1D5DB;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #F9FAFB;
+}
+
+.card-icon-placeholder {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto; /* Push tags to the bottom of the card */
+}
+
+.tag {
+  background-color: #F3F4F6; /* Light gray background for tags */
+  color: #4B5563; /* Darker gray text */
+  padding: 5px 12px;
+  border-radius: 9999px; /* Pill shape */
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.card-cta .steps {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.card-cta .steps li {
+  font-size: 0.9rem;
+  color: #6B7280;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.cta-button {
+  background: linear-gradient(to right, #C084FC, #7E22CE);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  /* transition: opacity 0.2s ease; */ /* Not needed for screenshot */
+  width: 100%; /* Make button full width within its container */
+  text-align: center;
+}
+
+/* .cta-button:hover {
+  opacity: 0.9;
+} */
+
+.cta-support-text {
+  font-size: 0.75rem;
+  color: #9CA3AF; /* Lighter gray for support text */
+  text-align: center;
+  margin-top: 0.75rem;
+  margin-bottom: 0; /* Remove bottom margin if it's the last element */
+}
+
+/* Responsive Design Adjustments - Kept for potential direct viewing, but screenshot is fixed width */
+@media (max-width: 992px) { 
+  .row1, .row2, .row3 {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+  }
+  .headline-gradient {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) { 
+  /* body { padding: 15px; } */ /* Body padding is fixed now */
+  .bento-card {
+    padding: 20px;
+  }
+  .headline-gradient {
+    font-size: 1.8rem;
+  }
+  .highlight-gradient {
+    font-size: 1.5rem;
+  }
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
