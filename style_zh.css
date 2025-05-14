@@ -122,12 +122,14 @@ h2 {
   position: absolute;
   top: 16px;
   right: 16px;
-  background-color: #EDE9FE; /* Light purple background for tag */
-  color: #7E22CE; /* Deep purple text */
+  left: auto;
+  background-color: #EDE9FE;
+  color: #7E22CE;
   padding: 4px 10px;
-  border-radius: 9999px; /* Pill shape */
+  border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
+  z-index: 2;
 }
 
 .sub-headline {
@@ -220,6 +222,7 @@ h2 {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+  text-decoration: none !important;
 }
 
 /* .cta-button:hover {
@@ -272,5 +275,11 @@ h2 {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
+}
+
+.sub-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
